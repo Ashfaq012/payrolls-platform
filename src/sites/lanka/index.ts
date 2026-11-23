@@ -34,6 +34,7 @@ export const lanka: SiteConfig = {
   leads: {
     routingKey: "LK-PAYROLL",
     countryOptions: ["Sri Lanka", "India", "Saudi Arabia", "United Arab Emirates", "Other"],
+    dialCode: "+94",
   },
   hero: {
     eyebrow: "Payroll outsourcing · Sri Lanka",
@@ -41,6 +42,7 @@ export const lanka: SiteConfig = {
     pendingClaimH1: { text: "#1 Payroll Outsourcing Partner in Sri Lanka", approved: false },
     body: "Streamline payroll, simplify compliance and manage your workforce with confidence.",
     highlights: ["EPF, ETF and APIT handled", "Reviewed before you approve", "Dedicated payroll specialist"],
+    statutorySummary: "EPF, ETF and APIT",
   },
   stats,
   why,

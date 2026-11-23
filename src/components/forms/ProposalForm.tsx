@@ -28,11 +28,13 @@ export function ProposalForm({
   countryOptions,
   defaultCountry,
   privacyHref,
+  dialCode,
 }: {
   services: { slug: string; name: string }[];
   countryOptions: string[];
   defaultCountry: string;
   privacyHref: string;
+  dialCode: string;
 }) {
   const [state, formAction, pending] = useActionState<ProposalState, FormData>(submitProposal, { status: "idle" });
   const [values, setValues] = useState<Values>({
@@ -130,7 +132,7 @@ export function ProposalForm({
         <Field id="email" label="Business email" error={errors.email}>
           <input id="f-email" name="email" type="email" autoComplete="email" inputMode="email" required value={values.email} onChange={update("email")} {...aria("email", errors)} className={inputCls(errors.email)} />
         </Field>
-        <Field id="phone" label="Phone number" hint="Include your country code, e.g. +94" error={errors.phone}>
+        <Field id="phone" label="Phone number" hint={`Include your country code, e.g. ${dialCode}`} error={errors.phone}>
           <input id="f-phone" name="phone" type="tel" autoComplete="tel" inputMode="tel" required value={values.phone} onChange={update("phone")} {...aria("phone", errors)} className={inputCls(errors.phone)} />
         </Field>
         <Field id="country" label="Country" error={errors.country}>

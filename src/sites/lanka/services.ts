@@ -529,28 +529,4 @@ export const services: Service[] = [
     related: ["staff-outsourcing", "hr-outsourcing"],
     approvalNote: "Which functions are offered as managed services is not yet defined.",
   },
-  {
-    slug: "multi-country-payroll",
-    status: "draft",
-    group: "solutions",
-    icon: "map",
-    name: "Multi-Country Payroll",
-    summary: "One partner for payroll across Sri Lanka, India and the GCC.",
-    metaTitle: "Multi-Country Payroll from Sri Lanka",
-    metaDescription:
-      "Coordinate payroll across Sri Lanka, India, Saudi Arabia and the UAE with one partner and consistent reporting.",
-    eyebrow: "Multi-Country Payroll",
-    h1: "Payroll across multiple countries, coordinated",
-    intro:
-      "If your workforce extends beyond Sri Lanka, coordinate payroll across countries with consistent processes and reporting.",
-    includes: [
-      { title: "Consistent processes", body: "One approach to inputs, approvals and reporting.", icon: "settings" },
-      { title: "Consolidated reporting", body: "Payroll cost reporting across countries.", icon: "chart" },
-    ],
-    idealFor: ["Regional businesses with teams in South Asia and the GCC"],
-    local: { heading: "Sister sites", body: "To be completed when the other country sites launch.", points: [] },
-    faqs: [],
-    related: ["payroll-outsourcing", "managed-payroll"],
-    approvalNote: "Publish only once the India and GCC operations are confirmed.",
-  },
 ];

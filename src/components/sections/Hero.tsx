@@ -41,7 +41,7 @@ export function Hero({ site }: { site: SiteConfig }) {
         </div>
 
         <Parallax offset={-40} className="animate-rise delay-3">
-          <HeroCycle />
+          <HeroCycle statutory={hero.statutorySummary} />
         </Parallax>
       </Container>
     </section>
@@ -49,11 +49,11 @@ export function Hero({ site }: { site: SiteConfig }) {
 }
 
 /** A typical month, set as a plain schedule — a process outline, not a software screenshot. */
-function HeroCycle() {
+function HeroCycle({ statutory }: { statutory: string }) {
   const steps = [
     { label: "Inputs received", detail: "Attendance, joiners, leavers and changes" },
     { label: "Pay calculated", detail: "Allowances, overtime and deductions" },
-    { label: "Statutory figures prepared", detail: "EPF, ETF and APIT" },
+    { label: "Statutory figures prepared", detail: statutory },
     { label: "Independent review", detail: "A second specialist checks every run" },
     { label: "Your approval", detail: "Nothing is paid without it" },
   ];
