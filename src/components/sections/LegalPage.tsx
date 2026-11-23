@@ -32,6 +32,18 @@ export function LegalPage({ site, page, doc }: { site: SiteConfig; page: StaticP
               </section>
             ))}
           </div>
+          {doc.sources && doc.sources.length > 0 && (
+            <section className="mt-10">
+              <h2 className="text-xl font-bold">Official sources</h2>
+              <ul className="mt-3 list-disc space-y-2 ps-6">
+                {doc.sources.map((source) => (
+                  <li key={source.href}>
+                    <a href={source.href} className="text-accent underline underline-offset-4">{source.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
         </Container>
       </section>
     </>

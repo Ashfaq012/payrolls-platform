@@ -35,16 +35,16 @@ Nothing on this list goes live as fact until the named owner signs it off. Updat
 
 ## Compliance content
 
-All figures are `verified: false` and `compliance.lastReviewed` is `null`. A qualified Saudi payroll or labour-law professional needs to:
+Official-source review completed on **2026-11-23**. Reviewed numeric statements now have `verified: true`; compliance and resource review dates are set. Specific government sources are linked beside the content and catalogued in `src/sites/gcc-sources.ts`.
 
-- [ ] Confirm GOSI rates for existing Saudi members, the phased rates for new entrants under the July 2024 Social Insurance Law, SANED, occupational hazards, and the contribution minimum and ceiling
-- [ ] Confirm WPS / Mudad wording and current compliance thresholds
-- [ ] Confirm end-of-service rates and resignation reductions, including any effect of the February 2025 Labour Law amendments
-- [ ] Confirm overtime, annual leave and Ramadan hours wording
-- [ ] Confirm the medical insurance summary with the Council of Health Insurance
-- [ ] Check every source URL (gosi.gov.sa, hrsd.gov.sa, mudad.com.sa, qiwa.sa, chi.gov.sa)
-- [ ] Set `lastReviewed` (ISO date) on the compliance block and on each guide
-- [ ] Review the three draft guides in `saudia/resources.ts`, then publish them and the resources page
+Reviewed scope: GOSI eligibility and dated contribution schedule; WPS upload period; end-of-service wage basis and resignation exceptions; hours, leave and employer health insurance.
+
+This records source verification, not approval of business claims or a professional legal sign-off. Resource guides remain drafts. The consolidation article is editorial process guidance, not a government-endorsed method.
+
+- [ ] Obtain jurisdiction-specific professional review for the operating entity and workforce.
+- [ ] Approve publication of draft resources separately.
+- [ ] Confirm service licences, business claims and operating details listed above.
+- [ ] Recheck scheduled reforms at commencement and keep review dates current.
 
 ## Legal
 

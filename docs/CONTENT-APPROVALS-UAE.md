@@ -35,17 +35,16 @@ Nothing on this list goes live as fact until the named owner signs it off. Updat
 
 ## Compliance content
 
-All figures are `verified: false` and `compliance.lastReviewed` is `null`. A qualified UAE payroll or employment-law professional needs to:
+Official-source review completed on **2026-11-23**. Reviewed numeric statements now have `verified: true`; compliance and resource review dates are set. Specific government sources are linked beside the content and catalogued in `src/sites/gcc-sources.ts`.
 
-- [ ] Confirm WPS wording, including how it applies in free zones
-- [ ] Confirm gratuity rates (21 / 30 days' basic wage), the two-year cap, and the alternative end-of-service scheme and DIFC DEWS wording
-- [ ] Confirm pension wording for GPSSA, the Abu Dhabi Pension Fund and GCC nationals; add contribution rates if wanted
-- [ ] Confirm current Emiratisation targets and the smaller-company sector rules
-- [ ] Confirm ILOE and nationwide health insurance wording
-- [ ] Confirm overtime, annual leave, Ramadan hours and DIFC / ADGM wording
-- [ ] Check every source URL (mohre.gov.ae, u.ae, gpssa.gov.ae, pension.gov.ae, nafis.gov.ae, iloe.ae, difc.ae, adgm.com)
-- [ ] Set `lastReviewed` (ISO date) on the compliance block and on each guide
-- [ ] Review the three draft guides in `emirates/resources.ts`, then publish them and the resources page
+Reviewed scope: Federal and financial-free-zone scope; gratuity eligibility and final-payment deadline; pension jurisdiction; Emiratisation; ILOE exemptions; phased health insurance and working hours.
+
+This records source verification, not approval of business claims or a professional legal sign-off. Resource guides remain drafts. The consolidation article is editorial process guidance, not a government-endorsed method.
+
+- [ ] Obtain jurisdiction-specific professional review for the operating entity and workforce.
+- [ ] Approve publication of draft resources separately.
+- [ ] Confirm service licences, business claims and operating details listed above.
+- [ ] Recheck scheduled reforms at commencement and keep review dates current.
 
 ## Legal
 

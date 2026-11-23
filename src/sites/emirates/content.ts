@@ -47,7 +47,7 @@ export const why = {
     },
     {
       title: "Confidential data handling",
-      body: "Salary and identity data is shared only with the people who need it, through agreed secure channels, in line with UAE data protection law.",
+      body: "Salary and identity data is shared only with the people who need it, through agreed secure channels.",
       icon: "lock",
     },
     {
@@ -155,11 +155,11 @@ export const faqs: Faq[] = [
   },
   {
     q: "Do you handle free zone companies?",
-    a: "Yes. Free zones, and the DIFC and ADGM financial centres, have their own rules for employment and salary payment. We confirm what applies to each of your entities during setup.",
+    a: "Yes. Federal employment law applies in most free zones, while DIFC and ADGM have distinct employment laws. Free-zone administration and salary-payment requirements also need checking for each entity.",
   },
   {
     q: "What is WPS?",
-    a: "The Wage Protection System requires mainland employers to pay salaries electronically through approved banks or exchange houses, so the Ministry of Human Resources and Emiratisation can check wages are paid on time. We prepare the salary file each month.",
+    a: "The Wage Protection System requires covered employers to pay salaries electronically through approved banks or exchange houses, so the Ministry of Human Resources and Emiratisation can check wages are paid on time. We prepare the salary file each month.",
   },
   {
     q: "Will we still approve the payroll?",

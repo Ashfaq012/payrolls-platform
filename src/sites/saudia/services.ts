@@ -412,7 +412,7 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Can HR outsourcing be combined with payroll?",
-        a: "Yes. Most clients combine them, which removes double data entry and keeps employee records aligned with payroll and government platforms.",
+        a: "Yes. Combining them can reduce duplicate data entry and keeps employee records aligned with payroll and government platforms.",
       },
     ],
     related: ["payroll-outsourcing", "recruitment", "payroll-compliance"],

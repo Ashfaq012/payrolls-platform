@@ -33,17 +33,22 @@ Nothing on this list goes live as fact until the named owner signs it off. Updat
 
 ## Compliance content
 
-All figures are `verified: false` and `compliance.lastReviewed` is `null`. A qualified Indian payroll professional or chartered accountant needs to:
+Official-source review completed on **2026-11-23** for all six compliance topics, all four resource guides, service explanations, FAQs and legal information. The remaining numeric cards are source-verified; their verification tags are removed. Review dates record this source check, not accountant or legal approval.
 
-- [ ] Confirm PF rates, the EPS split and the ₹15,000 wage ceiling, and the coverage threshold under the Code on Social Security
-- [ ] Confirm ESI rates and the ₹21,000 wage threshold
-- [ ] Confirm TDS wording against the Income-tax Act, 2025 (in force from 1 April 2026), including current form names
-- [ ] Confirm gratuity basis, the ₹20 lakh ceiling and the one-year rule for fixed-term employees
-- [ ] Confirm the labour codes summary and the 50% wage-definition rule against notified central and state rules
-- [ ] Replace the generic india.gov.in link on the PT/LWF topic with better sources, or keep it deliberately
-- [ ] Check every source URL (epfindia.gov.in, esic.gov.in, incometaxindia.gov.in, tdscpc.gov.in, labour.gov.in)
-- [ ] Set `lastReviewed` (ISO date) on the compliance block and on each guide
-- [ ] Review the four draft guides in `india/resources.ts`, then publish them and the resources page
+| Area | Evidence and correction |
+| --- | --- |
+| PF | EPFO contribution sheet: 12% usual rate, 10% exceptions, EPS eligibility and additional charges. Ministry FAQs dated 25 October 2026, questions 111-113, refer to a Rs 25,000 EPF ceiling; the older EPFO sheet still says Rs 15,000. Removed the unsupported current EPS ceiling card rather than equating EPF and EPS. Notification/effective-date and EPS transition checks remain necessary for an actual payroll. |
+| ESI | ESIC publication: 0.75% employee, 3.25% employer, Rs 21,000 ordinary entry ceiling, Rs 25,000 disability ceiling, average daily wage exemption up to Rs 176. |
+| TDS | Income Tax Department transition guidance, Form 138 manual and notified 2026 Rules: section 392, Form 138 quarterly statement, Form 130 certificate, Form 124 evidence. Prior periods retain their applicable forms. |
+| PT/LWF | Article 276 amendment confirms Rs 2,500 annual PT cap. Maharashtra tax law and Labour Welfare Board replace the generic national portal link. State examples are not represented as a nationwide schedule. |
+| Gratuity / codes | Ministry FAQs confirm eligibility exceptions, one-year fixed-term rule, usual monthly-rated 15/26 formula, Rs 20 lakh cap and 30-day payment deadline. Clarified the 50% add-back rule rather than a mandatory basic-pay/CTC ratio. |
+| Privacy | MeitY G.S.R. 843(E): core DPDP processing duties and sections 11-17 commence eighteen months after November 2025 Gazette publication; they are not described as already effective in November 2026. |
+
+Direct evidence links are maintained in src/sites/india/sources.ts and displayed on the relevant compliance topics, guides and privacy page. Some official older documents contain superseded amounts: use them only for the specific unchanged provisions identified above.
+
+- [ ] Qualified professional review of establishment-specific applicability, state notifications and PF/EPS transition before operational use.
+- [ ] Editorial approval to publish the four guides and resources index (existing draft status retained).
+- [ ] Management approval for business claims, services and legal-policy placeholders listed elsewhere in this register.
 
 ## Legal
 

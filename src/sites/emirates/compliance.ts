@@ -1,21 +1,14 @@
 import type { ComplianceContent } from "../types";
+import { gccReviewedOn, gccSources as sources } from "../gcc-sources";
 
-/**
- * Educational compliance content for the UAE (mainland, federal rules unless stated).
- *
- * Figures are `verified: false` until a qualified UAE payroll or employment-law
- * professional checks them against the official source. Free zones, and the
- * DIFC and ADGM, have their own employment regimes, and pension rules for
- * nationals differ between the federal GPSSA and some emirate-level funds.
- * Emiratisation targets change year to year. See docs/CONTENT-APPROVALS-UAE.md.
- */
+/** Official sources reviewed; business and publication approval remain separate. */
 export const compliance: ComplianceContent = {
   heading: "UAE payroll compliance, explained",
   intro:
-    "UAE payroll has no income tax, but it does have salary payment rules, end-of-service obligations, pensions for nationals and Emiratisation targets. Here is an overview of the main ones and how we support each.",
+    "UAE employment wages are not subject to personal income tax. Payroll still involves salary-payment rules, end-of-service obligations, pensions and Emiratisation. The applicable regime depends on the employer and employee.",
   disclaimer:
-    "This overview is general information, not legal advice. It reflects mainland federal rules unless stated. Free zones, the DIFC and ADGM have their own rules, and requirements change over time, so always confirm them against the official sources listed.",
-  lastReviewed: null,
+    "This overview covers the federal private-sector regime unless stated. Free-zone administration and salary-payment requirements must be checked separately; DIFC and ADGM have distinct employment laws. Government and domestic-worker regimes are outside this summary.",
+  lastReviewed: gccReviewedOn,
   topics: [
     {
       id: "wps",
@@ -23,9 +16,9 @@ export const compliance: ComplianceContent = {
       fullName: "Wage Protection System",
       icon: "wallet",
       summary:
-        "A Ministry of Human Resources and Emiratisation (MOHRE) system that checks mainland private-sector salaries are paid in full and on time, through approved banks and exchange houses.",
+        "MOHRE's Wage Protection System monitors electronic wage payments by covered establishments through approved financial institutions, against contractual amounts and payment dates.",
       keyPoints: [
-        "Salaries are paid electronically through WPS-registered agents, not in cash",
+        "Covered employers use WPS-approved payment channels; check the applicable establishment and employee exemptions",
         "A salary information file is submitted with each payment",
         "Late or missing salary payments can lead to fines and restrictions on Ministry services",
       ],
@@ -34,7 +27,7 @@ export const compliance: ComplianceContent = {
         "Checks that paid salaries match contracts",
         "Payment calendars that keep you within the deadlines",
       ],
-      sources: [{ label: "Ministry of Human Resources and Emiratisation", href: "https://www.mohre.gov.ae" }],
+      sources: [sources.uaeWps, sources.uaeTax],
     },
     {
       id: "gratuity",
@@ -42,11 +35,11 @@ export const compliance: ComplianceContent = {
       fullName: "End-of-service gratuity",
       icon: "scale",
       summary:
-        "A lump-sum benefit owed to expatriate employees under the Labour Law when employment ends after at least one year of service, based on basic wage and years of service.",
+        "Under the federal private-sector regime, eligible foreign full-time workers receive gratuity after at least one year of continuous service, using their last basic wage. Other work patterns and approved savings schemes require different treatment.",
       keyPoints: [
         "The award is calculated on basic wage, with a higher rate for service beyond five years",
-        "The total award is capped",
-        "Employers may join an approved alternative end-of-service savings scheme; the DIFC uses its own workplace savings plan",
+        "The award is capped at two years' wage; unpaid absence is excluded from qualifying service, and eligible fractions of a year are calculated proportionately",
+        "Final wages and entitlements are due within 14 days of contract termination. Approved alternative savings schemes and DIFC arrangements must be assessed separately",
       ],
       weHandle: [
         "Monthly gratuity accruals",
@@ -54,14 +47,11 @@ export const compliance: ComplianceContent = {
         "Liability reports to support financial statements",
       ],
       figures: [
-        { label: "First five years", value: "21 days' basic wage per year", verified: false },
-        { label: "After five years", value: "30 days' basic wage per year", verified: false },
-        { label: "Cap", value: "Two years' wage in total", verified: false },
+        { label: "First five years", value: "21 days' basic wage per year", verified: true },
+        { label: "After five years", value: "30 days' basic wage per year", verified: true },
+        { label: "Cap", value: "Two years' wage in total", verified: true },
       ],
-      sources: [
-        { label: "Ministry of Human Resources and Emiratisation", href: "https://www.mohre.gov.ae" },
-        { label: "UAE Government portal — end-of-service benefits", href: "https://u.ae" },
-      ],
+      sources: [sources.uaeLaw, sources.uaeDews],
     },
     {
       id: "pensions",
@@ -71,8 +61,8 @@ export const compliance: ComplianceContent = {
       summary:
         "UAE nationals in the private sector are registered for pension contributions, shared between employee, employer and government. GCC nationals are covered under their home country's scheme.",
       keyPoints: [
-        "Most private-sector Emiratis are covered by the federal GPSSA; Abu Dhabi nationals are covered by the Abu Dhabi Pension Fund",
-        "Contributions are calculated on contributory salary and paid monthly",
+        "GPSSA covers eligible Emiratis working for private-sector employers in the UAE except Abu Dhabi. Determine the responsible fund from the employer's jurisdiction and scheme coverage, not the employee's home emirate",
+        "Check whether the insured is covered by Federal Law 7/1999, Decree-Law 57/2023 or an emirate fund; contribution rates and salary limits differ",
         "GCC nationals working in the UAE contribute to their home country's scheme through the GCC extension",
       ],
       weHandle: [
@@ -80,10 +70,7 @@ export const compliance: ComplianceContent = {
         "Monthly contribution schedules",
         "Joiner and leaver updates to the pension authority",
       ],
-      sources: [
-        { label: "General Pension and Social Security Authority (GPSSA)", href: "https://gpssa.gov.ae" },
-        { label: "Abu Dhabi Pension Fund", href: "https://www.pension.gov.ae" },
-      ],
+      sources: [sources.uaePensions, sources.uaePensionRates, sources.gccPensions],
     },
     {
       id: "emiratisation",
@@ -91,10 +78,10 @@ export const compliance: ComplianceContent = {
       fullName: "Emiratisation targets",
       icon: "chart",
       summary:
-        "Private companies above a size threshold must increase the share of UAE nationals in skilled roles each year, with financial contributions for shortfalls.",
+        "Covered MOHRE private-sector establishments with at least 50 employees must achieve the prescribed Emiratisation growth in skilled jobs. Selected establishments with 20–49 employees have a separate hiring requirement.",
       keyPoints: [
-        "Companies with 50 or more employees have annual targets for Emiratis in skilled roles",
-        "Some smaller companies in selected sectors must also hire UAE nationals",
+        "For covered 50+ establishments, the scheduled increase is 1 percentage point each half-year, reaching 10% by the end of 2026",
+        "Selected 20–49 establishments were required to hire one Emirati in 2024 and one additional Emirati in 2025; check ongoing retention and replacement requirements",
         "Emirati employees must be registered for pension contributions and paid through WPS to count",
       ],
       weHandle: [
@@ -102,11 +89,8 @@ export const compliance: ComplianceContent = {
         "Headcount reports by nationality",
         "Correct pension and WPS treatment for every Emirati hire",
       ],
-      figures: [{ label: "Annual target (50+ employees)", value: "2% more skilled Emiratis a year", verified: false }],
-      sources: [
-        { label: "Ministry of Human Resources and Emiratisation", href: "https://www.mohre.gov.ae" },
-        { label: "Nafis", href: "https://www.nafis.gov.ae" },
-      ],
+      figures: [{ label: "Covered 50+ establishments: end-2026 target", value: "10% Emiratisation in skilled jobs", verified: true }],
+      sources: [sources.uaeEmployers],
     },
     {
       id: "insurance",
@@ -114,10 +98,10 @@ export const compliance: ComplianceContent = {
       fullName: "Unemployment and health insurance",
       icon: "heart-pulse",
       summary:
-        "Employees must subscribe to Involuntary Loss of Employment (ILOE) insurance, and employers must provide health insurance for their staff.",
+        "ILOE subscription applies to eligible employees, while employer health-insurance duties depend on the applicable emirate rules and residence-issuance or renewal requirements.",
       keyPoints: [
-        "ILOE is mandatory for most private-sector and federal government employees, who pay the premium themselves",
-        "Health insurance for private-sector employees is mandatory across the emirates, with emirate-level rules in Dubai and Abu Dhabi",
+        "ILOE generally covers private-sector and federal-government employees. Exemptions include domestic workers, under-18s, qualifying owner-investors, temporary-contract workers and pension-receiving retirees who rejoin employment",
+        "The health-insurance expansion took effect on 1 January 2025; previously issued residencies transition at renewal. Dubai and Abu Dhabi retain their emirate-specific arrangements",
         "Insurance status is linked to residency and other government services",
       ],
       weHandle: [
@@ -125,10 +109,7 @@ export const compliance: ComplianceContent = {
         "Joiner and leaver lists for your health insurer",
         "Premium cost allocation in payroll reports",
       ],
-      sources: [
-        { label: "ILOE insurance", href: "https://www.iloe.ae" },
-        { label: "Ministry of Human Resources and Emiratisation", href: "https://www.mohre.gov.ae" },
-      ],
+      sources: [sources.uaeIloe, sources.uaeHealth],
     },
     {
       id: "labour-law",
@@ -139,8 +120,8 @@ export const compliance: ComplianceContent = {
         "The federal Labour Law sets working hours, overtime, leave and fixed-term contracts for the mainland and most free zones. The DIFC and ADGM have their own employment laws.",
       keyPoints: [
         "Employment contracts are fixed-term",
-        "Overtime is paid at a premium, with a higher rate for night work",
-        "Annual leave is 30 days a year after one year of service, and working hours are reduced during Ramadan",
+        "Federal overtime is based on basic hourly wage plus at least 25%; work between 10 pm and 4 am attracts at least 50%, except for shift workers",
+        "Annual leave is 30 days after a year; workers with more than six months but less than a year receive two days per month. Normal working hours reduce by two hours during Ramadan",
       ],
       weHandle: [
         "Overtime and leave calculations to the applicable rules",
@@ -148,14 +129,10 @@ export const compliance: ComplianceContent = {
         "The right rules for each mainland, free zone, DIFC or ADGM entity",
       ],
       figures: [
-        { label: "Overtime premium", value: "25% (50% at night)", verified: false },
-        { label: "Annual leave", value: "30 days a year", verified: false },
+        { label: "Overtime premium", value: "At least 25%; 50% for qualifying night overtime", verified: true },
+        { label: "Annual leave", value: "30 days after one year of service", verified: true },
       ],
-      sources: [
-        { label: "Ministry of Human Resources and Emiratisation", href: "https://www.mohre.gov.ae" },
-        { label: "DIFC Employment Law", href: "https://www.difc.ae" },
-        { label: "ADGM Employment Regulations", href: "https://www.adgm.com" },
-      ],
+      sources: [sources.uaeLaw, sources.uaeHours, sources.uaeAdgm],
     },
   ],
 };

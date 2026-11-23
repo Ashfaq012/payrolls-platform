@@ -47,7 +47,7 @@ export const why = {
     },
     {
       title: "Confidential data handling",
-      body: "Salary and identity data is shared only with the people who need it, through agreed secure channels, in line with each country's data protection law.",
+      body: "Salary and identity data is shared only with the people who need it, through agreed secure channels.",
       icon: "lock",
     },
     {
@@ -155,7 +155,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "Is income tax deducted from salaries in the GCC?",
-    a: "GCC countries do not currently levy personal income tax on employment income, so payroll generally has no income tax withholding. The main deductions are social insurance contributions for national employees, and some countries have contributions for expatriates too.",
+    a: "Tax and social insurance must be checked by country and employee. Oman has enacted personal income tax starting in 2028 for specified income types above OMR 42,000 total annual income, with 5% on taxable income subject to exemptions and deductions. Do not assume a permanent GCC-wide tax exemption.",
   },
   {
     q: "Do you provide consolidated regional reporting?",

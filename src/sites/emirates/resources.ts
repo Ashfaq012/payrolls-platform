@@ -1,9 +1,7 @@
 import type { ResourceArticle } from "../types";
+import { gccReviewedOn, gccSources as sources } from "../gcc-sources";
 
-/**
- * Compliance guides. All remain drafts until reviewed by a qualified
- * UAE payroll or employment-law professional and given a lastReviewed date.
- */
+/** Official sources reviewed; business and publication approval remain separate. */
 export const resources: ResourceArticle[] = [
   {
     slug: "wps-guide-for-employers",
@@ -15,32 +13,32 @@ export const resources: ResourceArticle[] = [
     excerpt: "Who it applies to, how salaries are paid, and what happens when payments are late.",
     readingMinutes: 5,
     publishedAt: null,
-    lastReviewed: null,
+    lastReviewed: gccReviewedOn,
     body: [
       {
         heading: "What WPS is",
         paragraphs: [
-          "The Wage Protection System is run by the Ministry of Human Resources and Emiratisation. Mainland employers pay salaries electronically through approved banks and exchange houses, with a salary information file, so the Ministry can confirm wages are paid in full and on time.",
+          "MOHRE operates WPS with the Central Bank to monitor contractual wage payments. Covered establishments use approved financial institutions and salary files; check the applicable establishment and employee exemptions before deciding which workers must be included.",
         ],
       },
       {
         heading: "Free zones",
         paragraphs: [
-          "Free zone companies follow their free zone authority's rules on salary payment. Some require WPS-style payments, others have their own arrangements, so check the rules for each entity.",
+          "Check each free-zone authority's salary-payment procedures and the applicable employment law. Free-zone status alone does not mean the federal Labour Law is displaced. DIFC and ADGM have separate employment regimes.",
         ],
       },
       {
         heading: "Staying compliant",
         paragraphs: ["Employers typically need to:"],
         bullets: [
-          "Pay every employee through a WPS-registered agent",
+          "Pay covered employees through an approved WPS channel and document applicable exceptions",
           "Pay by the due date each month",
           "Make sure paid salaries match contracts",
           "Resolve rejected or failed payments quickly",
         ],
       },
     ],
-    sources: [{ label: "Ministry of Human Resources and Emiratisation", href: "https://www.mohre.gov.ae" }],
+    sources: [sources.uaeWps, sources.uaeLaw, sources.uaeAdgm],
   },
   {
     slug: "end-of-service-gratuity",
@@ -52,18 +50,18 @@ export const resources: ResourceArticle[] = [
     excerpt: "Eligibility, calculation on basic wage, the cap, and alternative savings schemes.",
     readingMinutes: 5,
     publishedAt: null,
-    lastReviewed: null,
+    lastReviewed: gccReviewedOn,
     body: [
       {
         heading: "The basics",
         paragraphs: [
-          "Expatriate employees who complete at least one year of service are entitled to an end-of-service gratuity when employment ends. It is calculated on basic wage, with a higher rate for service beyond five years, and the total is capped.",
+          "For eligible foreign full-time employees under the federal regime, Article 51 provides 21 days of last basic wage per year for the first five years and 30 days per later year, after at least one year of continuous service. Unpaid absence is excluded; eligible part-years are proportional. The total is capped at two years' wage. Article 53 requires final entitlements within 14 days of termination.",
         ],
       },
       {
         heading: "Alternative schemes",
         paragraphs: [
-          "Employers can choose an approved alternative end-of-service savings scheme, which invests contributions during employment. In the DIFC, employers contribute to a workplace savings plan instead of paying gratuity.",
+          "Federal law permits approved alternative end-of-service savings arrangements. DIFC introduced DEWS in February 2020; determine the applicable qualifying scheme, exemptions and treatment of earlier accrued benefits instead of applying the federal gratuity formula to every DIFC employee. ADGM has its own Employment Regulations, effective from 1 April 2025.",
         ],
       },
       {
@@ -73,7 +71,7 @@ export const resources: ResourceArticle[] = [
         ],
       },
     ],
-    sources: [{ label: "Ministry of Human Resources and Emiratisation", href: "https://www.mohre.gov.ae" }],
+    sources: [sources.uaeLaw, sources.uaeDews, sources.uaeAdgm],
   },
   {
     slug: "emiratisation-and-payroll",
@@ -85,24 +83,21 @@ export const resources: ResourceArticle[] = [
     excerpt: "Pension registration, WPS payments and the reporting that supports your targets.",
     readingMinutes: 4,
     publishedAt: null,
-    lastReviewed: null,
+    lastReviewed: gccReviewedOn,
     body: [
       {
         heading: "The targets",
         paragraphs: [
-          "Private companies above a size threshold must increase the share of UAE nationals in skilled roles each year. Some smaller companies in selected sectors also have hiring requirements. Shortfalls lead to financial contributions.",
+          "Covered establishments with 50 or more employees must increase Emiratisation in skilled jobs by one percentage point each half-year, reaching 10% by the end of 2026. Selected establishments with 20–49 employees had to hire one Emirati in 2024 and an additional Emirati in 2025. Applicable shortfalls attract financial contributions; these are distinct requirements.",
         ],
       },
       {
         heading: "Why payroll matters",
         paragraphs: [
-          "Emirati hires generally count towards targets only when they are registered for pension contributions and paid through WPS. Getting both right from day one is a payroll task.",
+          "Maintain genuine employment, valid work permits, the required pension registration and WPS payment evidence. Pension jurisdiction follows the employer and scheme: GPSSA's private-sector coverage excludes employers in Abu Dhabi. Do not assign a pension fund solely from an employee's home emirate.",
         ],
       },
     ],
-    sources: [
-      { label: "Ministry of Human Resources and Emiratisation", href: "https://www.mohre.gov.ae" },
-      { label: "General Pension and Social Security Authority (GPSSA)", href: "https://gpssa.gov.ae" },
-    ],
+    sources: [sources.uaeEmployers, sources.uaePensions],
   },
 ];

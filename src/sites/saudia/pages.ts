@@ -1,3 +1,4 @@
+import { gccSources as sources } from "../gcc-sources";
 import type { SiteConfig, StaticPage, StaticPageKey } from "../types";
 
 export const pages: Record<StaticPageKey, StaticPage> = {
@@ -96,6 +97,7 @@ const ENTITY = "[Legal entity name — pending]";
 
 export const legal: SiteConfig["legal"] = {
   privacy: {
+    sources: [sources.saudiPrivacy, sources.saudiPrivacyRules],
     updatedAt: "2026-11-23",
     sections: [
       {
@@ -123,7 +125,7 @@ export const legal: SiteConfig["legal"] = {
       {
         heading: "Purpose and legal basis",
         paragraphs: [
-          "We process enquiry data to respond to you, prepare proposals and manage our business relationship with you, on the basis of your consent and our legitimate interest in responding to business enquiries.",
+          "We use enquiry data to respond to your request and prepare proposals. The applicable legal basis must be established under the law governing the operating entity: consent or a specific statutory exception where its conditions are met. [Entity, applicable law and processing bases pending confirmation.]",
         ],
       },
       {
@@ -139,7 +141,7 @@ export const legal: SiteConfig["legal"] = {
       {
         heading: "Your rights",
         paragraphs: [
-          "Under Saudi Arabia's Personal Data Protection Law, you may have rights to be informed, to access your personal data, to request its correction and to request its destruction. You may also lodge a complaint with the competent authority.",
+          "Under Saudi Arabia's Personal Data Protection Law, you may have rights to be informed, to access and obtain a readable copy of your personal data, to withdraw consent subject to applicable exceptions, to request its correction and to request its destruction. You may also lodge a complaint with the competent authority.",
         ],
       },
       {
@@ -189,7 +191,7 @@ export const legal: SiteConfig["legal"] = {
       {
         heading: "Our approach",
         paragraphs: [
-          "This website is designed to work without advertising or tracking cookies. We use privacy-friendly, cookieless analytics to understand overall usage.",
+          "This website is designed to work without advertising or tracking cookies. Where configured, cookieless analytics measure overall usage; the deployed tools must be confirmed before this policy is published.",
         ],
       },
       {

@@ -37,7 +37,7 @@ export const why = {
     },
     {
       title: "Saudi and expatriate payroll",
-      body: "Different GOSI treatment, end-of-service rules and documentation for each group, applied correctly in one payroll.",
+      body: "Insurance eligibility, GCC coverage and employee-specific benefits and documentation, assessed within one payroll.",
       icon: "users",
     },
     {
@@ -47,7 +47,7 @@ export const why = {
     },
     {
       title: "Confidential data handling",
-      body: "Salary and identity data is shared only with the people who need it, through agreed secure channels, in line with Saudi data protection law.",
+      body: "Salary and identity data is shared only with the people who need it, through agreed secure channels.",
       icon: "lock",
     },
     {

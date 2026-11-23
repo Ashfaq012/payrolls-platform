@@ -1,21 +1,14 @@
 import type { ComplianceContent } from "../types";
+import { gccReviewedOn, gccSources as sources } from "../gcc-sources";
 
-/**
- * Educational overview of payroll obligations in each GCC country.
- *
- * Figures are `verified: false` until a qualified professional in each country
- * checks them against the official source. Several GCC countries have recently
- * reformed social insurance and end-of-service rules (Saudi Arabia 2024,
- * Oman 2023 onwards, Bahrain 2024), so this content needs careful review.
- * See docs/CONTENT-APPROVALS-GCC.md.
- */
+/** Official sources reviewed; business and publication approval remain separate. */
 export const compliance: ComplianceContent = {
   heading: "GCC payroll compliance, country by country",
   intro:
-    "GCC countries share some features, such as no personal income tax and social insurance for nationals, but the details differ in every country. Here is an overview of each one and how we support it.",
+    "Social insurance, salary payments and end-of-service obligations differ across the six GCC countries. Oman has also enacted personal income tax effective from 2028; regional payroll planning must account for commencement dates.",
   disclaimer:
     "This overview is general information, not legal advice. Rules vary by country, by free zone and over time, so always confirm them against the official sources listed.",
-  lastReviewed: null,
+  lastReviewed: gccReviewedOn,
   topics: [
     {
       id: "saudi-arabia",
@@ -25,15 +18,12 @@ export const compliance: ComplianceContent = {
       summary:
         "Social insurance through GOSI for Saudis (with occupational hazard cover for expatriates), salaries paid through the Wage Protection System on Mudad, and end-of-service benefits under the Labour Law.",
       keyPoints: [
-        "A new Social Insurance Law from July 2024 phases in higher pension rates for new Saudi entrants",
-        "Monthly WPS wage files must match contracts and GOSI wages",
+        "The new GOSI pension schedule applies to eligible Saudi entrants without earlier civil retirement or social insurance periods as of 3 July 2024; GCC nationals require separate coverage checks",
+        "Reconcile WPS payments with contracts and payroll; GOSI contribution wages and net salary use different rules",
         "Saudization (Nitaqat) quotas apply by activity and company size",
       ],
       weHandle: ["GOSI calculations and updates", "WPS wage files for Mudad", "End-of-service accruals and settlements"],
-      sources: [
-        { label: "General Organization for Social Insurance", href: "https://www.gosi.gov.sa" },
-        { label: "Ministry of Human Resources and Social Development", href: "https://www.hrsd.gov.sa" },
-      ],
+      sources: [sources.saudiGosi, sources.saudiRates, sources.saudiWps, sources.saudiLabour, sources.saudiNitaqat],
     },
     {
       id: "uae",
@@ -43,16 +33,13 @@ export const compliance: ComplianceContent = {
       summary:
         "Salaries paid through the Wage Protection System, end-of-service gratuity for expatriates, pension contributions for UAE and GCC nationals, and Emiratisation targets.",
       keyPoints: [
-        "Free zones, the DIFC and ADGM have their own employment rules",
-        "Gratuity is calculated on basic wage and capped",
-        "Employees must hold unemployment (ILOE) insurance",
+        "Federal employment law covers most free zones; DIFC and ADGM have distinct employment regimes",
+        "Federal gratuity for foreign full-time workers requires one year of service, uses last basic wage, and is capped at two years' wage; approved savings schemes require separate treatment",
+        "Eligible workers must subscribe to ILOE; exemptions include domestic workers, temporary workers, under-18s and specified owners and pensioners",
       ],
       weHandle: ["WPS salary files", "Gratuity accruals and settlements", "Pension contributions for nationals"],
-      figures: [{ label: "Gratuity (first five years)", value: "21 days' basic wage per year", verified: false }],
-      sources: [
-        { label: "Ministry of Human Resources and Emiratisation", href: "https://www.mohre.gov.ae" },
-        { label: "General Pension and Social Security Authority", href: "https://gpssa.gov.ae" },
-      ],
+      figures: [{ label: "Gratuity (first five years)", value: "21 days' basic wage per year", verified: true }],
+      sources: [sources.uaeLaw, sources.uaePensions, sources.uaeIloe, sources.uaeAdgm],
     },
     {
       id: "qatar",
@@ -62,19 +49,16 @@ export const compliance: ComplianceContent = {
       summary:
         "Salaries paid through the Wage Protection System, a statutory end-of-service gratuity for expatriates, a national minimum wage, and social insurance for Qatari nationals.",
       keyPoints: [
-        "Employers pay wages electronically through the WPS",
-        "Expatriates with at least one year of service are owed an end-of-service gratuity",
-        "Qatari employees are covered by the General Retirement and Social Insurance Authority",
+        "Employers covered by the Labour Law pay wages through the applicable bank-transfer and WPS requirements",
+        "Article 54 provides at least three weeks of last basic wage per service year after one year's service, with proportionate fractions",
+        "Check Qatari employees' coverage under the Social Insurance Law; minimum wage allowances are QAR 500 for housing and QAR 300 for food unless provided",
       ],
       weHandle: ["WPS salary files", "End-of-service accruals and settlements", "Social insurance contributions for Qataris"],
       figures: [
-        { label: "End-of-service minimum", value: "3 weeks' basic wage per year", verified: false },
-        { label: "Minimum basic wage", value: "QAR 1,000 a month plus allowances", verified: false },
+        { label: "End-of-service minimum", value: "3 weeks' basic wage per year", verified: true },
+        { label: "Minimum basic wage", value: "QAR 1,000/month; housing and food additional unless provided", verified: true },
       ],
-      sources: [
-        { label: "Ministry of Labour", href: "https://www.mol.gov.qa" },
-        { label: "General Retirement and Social Insurance Authority", href: "https://www.grsia.gov.qa" },
-      ],
+      sources: [sources.qatarWps, sources.qatarGratuity, sources.qatarWages, sources.qatarInsurance],
     },
     {
       id: "kuwait",
@@ -85,18 +69,15 @@ export const compliance: ComplianceContent = {
         "Social security contributions for Kuwaiti nationals through PIFSS, and an end-of-service indemnity for expatriates under the private-sector Labour Law.",
       keyPoints: [
         "Kuwaiti employees and employers contribute to the Public Institution for Social Security",
-        "The indemnity grows with service, with a higher rate after five years, and is capped",
+        "Monthly-paid workers: 15 days' wage per year for the first five years, then one month per year, capped at 18 months' wage. Other pay frequencies have different rates and caps; termination circumstances can affect entitlement",
         "Salaries are paid through local bank accounts",
       ],
       weHandle: ["PIFSS contributions for Kuwaitis", "Indemnity accruals and settlements", "Bank salary files"],
       figures: [
-        { label: "Indemnity (first five years)", value: "15 days' wage per year", verified: false },
-        { label: "Indemnity (after five years)", value: "One month's wage per year", verified: false },
+        { label: "Monthly-paid indemnity (first five years)", value: "15 days' wage per year", verified: true },
+        { label: "Monthly-paid indemnity (after five years)", value: "One month's wage per year", verified: true },
       ],
-      sources: [
-        { label: "Public Institution for Social Security", href: "https://www.pifss.gov.kw" },
-        { label: "Public Authority of Manpower", href: "https://www.manpower.gov.kw" },
-      ],
+      sources: [sources.kuwaitLabour, sources.kuwaitInsurance],
     },
     {
       id: "bahrain",
@@ -104,17 +85,14 @@ export const compliance: ComplianceContent = {
       fullName: "SIO contributions and end of service",
       icon: "shield",
       summary:
-        "Social insurance through the Social Insurance Organization for Bahrainis and expatriates, with expatriate end-of-service benefits now funded through monthly contributions rather than paid by employers at exit.",
+        "Bahrain's SIO administers social insurance and, from 1 March 2024, the end-of-service scheme for covered non-Bahraini private-sector workers. Employers remain responsible for benefits attributable to earlier service.",
       keyPoints: [
         "Contributions cover pensions for Bahrainis, and work injury and unemployment cover more widely",
-        "Expatriate end-of-service benefits have moved into the social insurance system",
+        "Distinguish pre-1 March 2024 employer liabilities from subsequent SIO-funded service; domestic workers have separate treatment",
         "Expatriate work permits are managed through the Labour Market Regulatory Authority",
       ],
       weHandle: ["SIO contribution calculations", "Monthly contribution schedules", "Joiner and leaver updates"],
-      sources: [
-        { label: "Social Insurance Organization", href: "https://www.sio.gov.bh" },
-        { label: "Labour Market Regulatory Authority", href: "https://www.lmra.gov.bh" },
-      ],
+      sources: [sources.bahrainGratuity, sources.bahrainTransition],
     },
     {
       id: "oman",
@@ -122,18 +100,15 @@ export const compliance: ComplianceContent = {
       fullName: "Social Protection Fund and Labour Law",
       icon: "book",
       summary:
-        "A new Social Protection Law and Labour Law, both from 2023, reshaped contributions for Omanis, introduced cover for expatriates and changed end-of-service rules.",
+        "Oman's 2023 Labour Law and Social Protection Law changed benefits, with coverage introduced in phases. Do not assume every non-Omani benefit branch or savings arrangement is already operational.",
       keyPoints: [
-        "The Social Protection Fund manages contributions for Omanis and, increasingly, expatriates",
-        "Expatriate end-of-service benefits are based on basic wage and years of service",
-        "Omanisation requirements apply in many sectors and roles",
+        "The SPF's June 2026 report schedules non-Omani savings coverage by July 2027 and work-injury coverage by July 2028; check implementing commencement decisions",
+        "Article 61 provides workers not benefiting from Social Protection Law benefits at least one month's last basic wage per service year, including proportionate fractions, subject to the savings-system transition",
+        "Personal income tax starts in 2028: the law covers specified income types above OMR 42,000 total annual income, with 5% on taxable income after applicable deductions and exemptions",
       ],
       weHandle: ["Social Protection Fund contributions", "End-of-service accruals and settlements", "Bank salary files"],
-      figures: [{ label: "Expatriate end of service", value: "One month's basic wage per year", verified: false }],
-      sources: [
-        { label: "Social Protection Fund", href: "https://www.spf.gov.om" },
-        { label: "Ministry of Labour", href: "https://www.mol.gov.om" },
-      ],
+      figures: [{ label: "Article 61 end of service (eligible workers)", value: "One month's basic wage per year", verified: true }],
+      sources: [sources.omanLabour, sources.omanProtection, sources.omanTax],
     },
   ],
 };

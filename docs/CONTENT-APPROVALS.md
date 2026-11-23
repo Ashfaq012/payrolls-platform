@@ -34,13 +34,15 @@ Nothing on this list goes live as fact until the named owner signs it off. Updat
 
 ## Compliance content
 
-All figures are `verified: false` and `compliance.lastReviewed` is `null`. A qualified Sri Lankan payroll or tax professional needs to:
+The five tagged figures in `lanka/compliance.ts` were checked against official sources on 2026-11-23 and marked `verified: true`. `compliance.lastReviewed` records that source-check date, not professional legal sign-off. Direct evidence links are retained beside each topic on the website.
 
-- [ ] Confirm the EPF employee and employer minimum rates and the earnings base
-- [ ] Confirm the ETF employer rate
-- [ ] Confirm the gratuity qualifying service and calculation basis
-- [ ] Check every source URL (epf.lk, etfb.lk, ird.gov.lk, labourdept.gov.lk)
-- [ ] Set `lastReviewed` (ISO date) on the compliance block and on each guide
+- [x] Check EPF figures against CBSL's contribution guidance
+- [x] Check ETF figures against the ETF Board's employer guidance
+- [x] Check and clarify gratuity eligibility and calculation against the Department of Labour's Act
+- [x] Replace topic homepage links with direct official guidance, including IRD's APIT overview
+- [x] Record the compliance block's source-check date
+- [x] Check all three resource guides against official sources and record source-review dates (2026-11-23); replace generic source links with direct guidance
+- [ ] Obtain professional/editorial approval of the broader compliance copy and the source-checked draft guides
 - [ ] Review the three draft guides in `lanka/resources.ts`, then set `status: "published"` and the resources page to `published`
 
 ## Legal

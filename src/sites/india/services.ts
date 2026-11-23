@@ -38,7 +38,7 @@ export const services: Service[] = [
       },
       {
         title: "Professional tax and LWF",
-        body: "State-wise deductions applied by each employee's work location.",
+        body: "Deductions assessed under applicable state law, establishment coverage, salary slabs and employee exemptions.",
         icon: "map",
       },
       {
@@ -63,7 +63,7 @@ export const services: Service[] = [
       body: "Indian payroll layers central social security and tax law over state levies and holiday rules, and the labour codes are changing how wages are defined. We track these changes and apply them to your payroll.",
       points: [
         "PF ECR and ESI contributions prepared every month",
-        "TDS computed under each employee's chosen regime",
+        "TDS computed using annual regime intimations, with the new regime as default",
         "Professional tax and LWF applied state by state",
         "Full and final settlements, including gratuity and leave encashment",
       ],
@@ -411,7 +411,7 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Can HR outsourcing be combined with payroll?",
-        a: "Yes. Most clients combine them, which removes double data entry and keeps employee records aligned with payroll.",
+        a: "Yes. Combining these services can reduce double data entry and keep employee records aligned with payroll.",
       },
     ],
     related: ["payroll-outsourcing", "staff-outsourcing", "recruitment"],
@@ -438,7 +438,7 @@ export const services: Service[] = [
       },
       {
         title: "Payroll and statutory contributions",
-        body: "Salaries, PF, ESI, TDS and professional tax processed for every outsourced employee.",
+        body: "Salaries processed for outsourced employees, with PF, ESI, TDS and professional tax applied according to coverage and eligibility.",
         icon: "wallet",
       },
       {

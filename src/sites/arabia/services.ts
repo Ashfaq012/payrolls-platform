@@ -300,7 +300,7 @@ export const services: Service[] = [
     summary: "Hire employees in GCC countries without setting up local entities.",
     metaTitle: "Employer of Record (EOR) in the GCC",
     metaDescription:
-      "Employ staff anywhere in the GCC without local entities. Our Employer of Record service handles visas, contracts, payroll and HR administration.",
+      "Employer of Record arrangements across the GCC require an authorised local employing provider and country-specific licences and terms. Available coverage and responsibilities must be confirmed before engagement.",
     eyebrow: "Employer of Record",
     h1: "Employ people across the GCC without local entities",
     intro:
