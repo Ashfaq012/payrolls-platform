@@ -411,7 +411,7 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Can HR outsourcing be combined with payroll?",
-        a: "Yes. Most clients combine them, which removes double data entry and keeps employee records aligned with payroll.",
+        a: "Yes. Combining them can reduce duplicate data entry and keeps employee records aligned with payroll.",
       },
     ],
     related: ["payroll-outsourcing", "recruitment", "payroll-compliance"],
@@ -439,7 +439,7 @@ export const services: Service[] = [
       },
       {
         title: "Payroll and WPS",
-        body: "Salaries and WPS payments processed for every outsourced employee.",
+        body: "Salaries processed for outsourced employees, using WPS where the employer and worker are covered.",
         icon: "wallet",
       },
       {

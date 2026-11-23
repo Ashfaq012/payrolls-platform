@@ -37,16 +37,16 @@ Nothing on this list goes live as fact until the named owner signs it off. Updat
 
 ## Compliance content
 
-All figures are `verified: false` and `compliance.lastReviewed` is `null`. Qualified professionals in each country need to:
+Official-source review completed on **2026-11-23**. Reviewed numeric statements now have `verified: true`; compliance and resource review dates are set. Specific government sources are linked beside the content and catalogued in `src/sites/gcc-sources.ts`.
 
-- [ ] Saudi Arabia and UAE: keep consistent with the dedicated country sites (`saudia/`, `emirates/`)
-- [ ] Qatar: confirm WPS, the three-week end-of-service minimum, minimum wage and GRSIA wording
-- [ ] Kuwait: confirm PIFSS and the indemnity rates and cap
-- [ ] Bahrain: confirm SIO contributions and how expatriate end-of-service is now funded
-- [ ] Oman: confirm the Social Protection Fund coverage, current expatriate contributions and end-of-service wording
-- [ ] Check every source URL
-- [ ] Set `lastReviewed` (ISO date) on the compliance block and on each guide
-- [ ] Review the two draft guides in `arabia/resources.ts`, then publish them and the resources page
+Reviewed scope: Saudi/UAE consistency; Qatar minimum wage and gratuity; Kuwait monthly-paid indemnity limits; Bahrain pre/post-March 2024 liabilities; Oman phased social protection and 2028 income tax.
+
+This records source verification, not approval of business claims or a professional legal sign-off. Resource guides remain drafts. The consolidation article is editorial process guidance, not a government-endorsed method.
+
+- [ ] Obtain jurisdiction-specific professional review for the operating entity and workforce.
+- [ ] Approve publication of draft resources separately.
+- [ ] Confirm service licences, business claims and operating details listed above.
+- [ ] Recheck scheduled reforms at commencement and keep review dates current.
 
 ## Legal
 

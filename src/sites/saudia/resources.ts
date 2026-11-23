@@ -1,9 +1,7 @@
 import type { ResourceArticle } from "../types";
+import { gccReviewedOn, gccSources as sources } from "../gcc-sources";
 
-/**
- * Compliance guides. All remain drafts until reviewed by a qualified
- * Saudi payroll or labour-law professional and given a lastReviewed date.
- */
+/** Official sources reviewed; business and publication approval remain separate. */
 export const resources: ResourceArticle[] = [
   {
     slug: "gosi-guide-for-employers",
@@ -15,19 +13,19 @@ export const resources: ResourceArticle[] = [
     excerpt: "Saudi and expatriate coverage, the contribution base, and what changed with the new law.",
     readingMinutes: 6,
     publishedAt: null,
-    lastReviewed: null,
+    lastReviewed: gccReviewedOn,
     body: [
       {
         heading: "Who is covered",
         paragraphs: [
-          "Saudi employees are covered for pensions (annuities), unemployment insurance (SANED) and occupational hazards. Expatriate employees are covered for occupational hazards, which the employer pays.",
-          "Contributions are calculated on basic salary plus housing allowance, within a minimum and a maximum.",
+          "Eligible Saudi workers have annuity, SANED and occupational-hazard coverage. Non-Saudi workers generally have employer-paid occupational-hazard coverage; GCC nationals require a separate check under insurance-extension rules.",
+          "Apply GOSI's contribution-base rules for basic salary, housing and any relevant commissions. The monthly contributory wage ceiling is SAR 45,000; minimum bases and branch eligibility require separate checks.",
         ],
       },
       {
         heading: "The new Social Insurance Law",
         paragraphs: [
-          "A new Social Insurance Law took effect in July 2024. For Saudis who join the system after that date, annuity contribution rates increase in stages over several years. Existing members stay on the previous rates, so many employers now run two sets of rules in one payroll.",
+          "The new law applies to entrants with no earlier civil-retirement or social-insurance contribution periods on 3 July 2024. For that cohort, employee and employer annuity rates are each 10% from 1 July 2026, 10.5% from 1 July 2027 and 11% from 1 July 2028. The previous scheme retains 9% each. SANED is 0.75% each for covered workers; occupational hazards is normally 2% employer-funded. These are separate branches, not alternative total rates.",
         ],
       },
       {
@@ -41,7 +39,7 @@ export const resources: ResourceArticle[] = [
         ],
       },
     ],
-    sources: [{ label: "General Organization for Social Insurance", href: "https://www.gosi.gov.sa" }],
+    sources: [sources.saudiGosi, sources.saudiRates, sources.saudiExisting, sources.gccPensions],
   },
   {
     slug: "wage-protection-system",
@@ -53,25 +51,22 @@ export const resources: ResourceArticle[] = [
     excerpt: "Bank salary payments, monthly wage files and the mismatches that cause problems.",
     readingMinutes: 5,
     publishedAt: null,
-    lastReviewed: null,
+    lastReviewed: gccReviewedOn,
     body: [
       {
         heading: "What WPS is",
         paragraphs: [
-          "The Wage Protection System checks that private-sector employers pay salaries on time and in line with employment contracts. Salaries are paid through banks, and a monthly wage file is submitted through the Mudad platform.",
+          "For covered establishments, WPS checks bank salary payments against contractual obligations through Mudad. From 1 March 2025 the permitted wage-file upload window is 30 days instead of 60. This is a reporting window, not permission to delay wages.",
         ],
       },
       {
         heading: "Avoiding mismatches",
         paragraphs: [
-          "Most WPS problems come from differences between the wage paid, the contract on Qiwa and the wage registered with GOSI. Keeping the three aligned whenever salaries change is the simplest way to stay compliant.",
+          "Check employee identifiers, pay periods, bank results, contractual wage components and lawful deductions before uploading. GOSI contributory wages and net bank payments use different bases, so they need reconciliation rather than identical totals. Record the reason for any discrepancy and resolve rejected payments.",
         ],
       },
     ],
-    sources: [
-      { label: "Mudad", href: "https://mudad.com.sa" },
-      { label: "Ministry of Human Resources and Social Development", href: "https://www.hrsd.gov.sa" },
-    ],
+    sources: [sources.saudiWps, sources.saudiContracts],
   },
   {
     slug: "end-of-service-benefits",
@@ -83,13 +78,13 @@ export const resources: ResourceArticle[] = [
     excerpt: "How the award is calculated, how resignation affects it, and why accruing monthly helps.",
     readingMinutes: 5,
     publishedAt: null,
-    lastReviewed: null,
+    lastReviewed: gccReviewedOn,
     body: [
       {
         heading: "The basics",
         paragraphs: [
-          "When employment ends, the Labour Law entitles employees to an end-of-service award based on their last wage and years of service, with a higher rate for service beyond five years.",
-          "Where an employee resigns, the award may be reduced depending on their length of service.",
+          "Article 84 provides half a month's last wage for each of the first five years and one month's last wage for each later year, with proportional credit for fractions of a year. It is not automatically a basic-salary-only calculation; Article 86 permits agreed exclusion of specified variable commissions.",
+          "For ordinary resignation, Article 85 provides one-third for 2–5 years, two-thirds for more than 5 but under 10 years, and the full award from 10 years. Check Article 87 exceptions and the reason for termination, including Article 80 cases, before calculating entitlement. Final dues are normally due within one week, or two weeks if the worker ends the contract.",
         ],
       },
       {
@@ -99,6 +94,6 @@ export const resources: ResourceArticle[] = [
         ],
       },
     ],
-    sources: [{ label: "Ministry of Human Resources and Social Development", href: "https://www.hrsd.gov.sa" }],
+    sources: [sources.saudiLabour],
   },
 ];
