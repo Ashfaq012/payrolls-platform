@@ -8,7 +8,6 @@ export { draftsEnabled, isIndexable, isVisible } from "./visibility";
 
 /** Sites shown as "coming soon" in the country selector. */
 export const PLANNED_SITES: PlannedSite[] = [
-  { key: "emirates", domain: "payrollemirates.com", countryName: "United Arab Emirates", brandName: "Payroll Emirates" },
   { key: "arabia", domain: "payrollarabia.com", countryName: "GCC region", brandName: "Payroll Arabia" },
 ];
 
