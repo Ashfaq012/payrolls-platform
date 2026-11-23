@@ -85,7 +85,7 @@ export default async function ServicePage({ params }: PageProps<"/[site]/[slug]"
       <section aria-labelledby="local-title" className="bg-white py-24 lg:py-28">
         <Container className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal>
-            <SectionHeading id="local-title" eyebrow={site.country.name} title={service.local.heading} intro={service.local.body} />
+            <SectionHeading id="local-title" eyebrow={site.country.shortName} title={service.local.heading} intro={service.local.body} />
             {service.local.points.length > 0 && (
               <ul className="mt-8 space-y-3">
                 {service.local.points.map((p) => (

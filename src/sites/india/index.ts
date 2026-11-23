@@ -8,7 +8,7 @@ import { services } from "./services";
 export const india: SiteConfig = {
   key: "india",
   domain: "payrollsindia.com",
-  country: { code: "IN", name: "India", demonym: "Indian" },
+  country: { code: "IN", name: "India", demonym: "Indian", shortName: "India", inSentence: "India" },
   brand: {
     name: "Payrolls India",
     wordmark: ["PAYROLLS", "INDIA"],

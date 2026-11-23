@@ -37,13 +37,18 @@ export function pageMetadata(
   };
 }
 
+function areaServed(site: SiteConfig) {
+  const countries = (site.country.areaServed ?? [site.country.name]).map((name) => ({ "@type": "Country", name }));
+  return countries.length === 1 ? countries[0] : countries;
+}
+
 export function organizationJsonLd(site: SiteConfig) {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: site.brand.name,
     url: siteUrl(site),
-    areaServed: { "@type": "Country", name: site.country.name },
+    areaServed: areaServed(site),
     ...(site.contact.approved && site.contact.legalEntityName ? { legalName: site.contact.legalEntityName } : {}),
     ...(site.contact.approved && site.contact.email ? { email: site.contact.email } : {}),
     ...(site.contact.approved && site.contact.phone ? { telephone: site.contact.phone } : {}),
@@ -57,7 +62,7 @@ export function serviceJsonLd(site: SiteConfig, s: { name: string; metaDescripti
     name: s.name,
     description: s.metaDescription,
     url: siteUrl(site, `/${s.slug}`),
-    areaServed: { "@type": "Country", name: site.country.name },
+    areaServed: areaServed(site),
     provider: { "@type": "Organization", name: site.brand.name, url: siteUrl(site) },
   };
 }

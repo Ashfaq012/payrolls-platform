@@ -78,19 +78,23 @@ export default async function ArticlePage({ params }: PageProps<"/[site]/resourc
             ))}
           </div>
           <aside className="mt-14 rounded-2xl border border-line bg-white p-6">
-            <h2 className="text-base font-bold">Official sources</h2>
-            <ul className="mt-3 space-y-2 text-sm">
-              {article.sources.map((s) => (
-                <li key={s.href}>
-                  <a href={s.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-brand hover:underline">
-                    {s.label}
-                    <ExternalLink aria-hidden className="size-3" />
-                    <span className="sr-only">(opens in a new tab)</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-4 text-xs text-muted">{site.compliance.disclaimer}</p>
+            {article.sources.length > 0 && (
+              <>
+                <h2 className="text-base font-bold">Official sources</h2>
+                <ul className="mt-3 space-y-2 text-sm">
+                  {article.sources.map((s) => (
+                    <li key={s.href}>
+                      <a href={s.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-brand hover:underline">
+                        {s.label}
+                        <ExternalLink aria-hidden className="size-3" />
+                        <span className="sr-only">(opens in a new tab)</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+            <p className={`text-xs text-muted ${article.sources.length > 0 ? "mt-4" : ""}`}>{site.compliance.disclaimer}</p>
           </aside>
         </Container>
       </article>

@@ -3,7 +3,7 @@
 ## Hosting (recommended: Vercel)
 
 1. Import the repository. The framework is detected automatically.
-2. Add the domains `payrollslanka.com`, `www.payrollslanka.com`, `payrollsindia.com` and `www.payrollsindia.com`. The proxy redirects `www` to the apex with a 308.
+2. Add the domains `payrollslanka.com`, `www.payrollslanka.com`, `payrollsindia.com`, `www.payrollsindia.com`, `payrollsaudia.com`, `www.payrollsaudia.com`, `payrollemirates.com`, `www.payrollemirates.com`, `payrollarabia.com` and `www.payrollarabia.com`. The proxy redirects `www` to the apex with a 308.
 3. Production environment variables (see `.env.example`):
    - `ALLOW_INDEXING=true` (production only)
    - `LEADS_WEBHOOK_URL`, `LEADS_WEBHOOK_SECRET`. Required: production refuses to accept leads without them.
@@ -23,10 +23,10 @@ Confirm the exact values in the hosting dashboard when you add each domain. Repe
 
 ## Pre-launch
 
-- [ ] Every item in `CONTENT-APPROVALS.md` and `CONTENT-APPROVALS-INDIA.md` resolved, or deliberately left as a draft
+- [ ] Every item in `CONTENT-APPROVALS.md`, `CONTENT-APPROVALS-INDIA.md`, `CONTENT-APPROVALS-SAUDI.md`, `CONTENT-APPROVALS-UAE.md` and `CONTENT-APPROVALS-GCC.md` resolved, or deliberately left as a draft
 - [ ] Contact details approved and `contact.approved = true`
 - [ ] Legal pages reviewed, and their `status` moved from `review` to `published`
-- [ ] Webhook receives a test lead, and the CRM or inbox routes `LK-PAYROLL` and `IN-PAYROLL` correctly
+- [ ] Webhook receives a test lead, and the CRM or inbox routes `LK-PAYROLL`, `IN-PAYROLL`, `SA-PAYROLL`, `AE-PAYROLL` and `GCC-PAYROLL` correctly
 - [ ] `npm run lint`, `npx tsc --noEmit` and `npm run build` pass
 - [ ] `robots.txt` allows crawling and lists the sitemap on production only
 - [ ] `sitemap.xml` lists only published pages

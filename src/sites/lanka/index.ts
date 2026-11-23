@@ -8,7 +8,7 @@ import { services } from "./services";
 export const lanka: SiteConfig = {
   key: "lanka",
   domain: "payrollslanka.com",
-  country: { code: "LK", name: "Sri Lanka", demonym: "Sri Lankan" },
+  country: { code: "LK", name: "Sri Lanka", demonym: "Sri Lankan", shortName: "Sri Lanka", inSentence: "Sri Lanka" },
   brand: {
     name: "Payrolls Lanka",
     wordmark: ["PAYROLLS", "LANKA"],

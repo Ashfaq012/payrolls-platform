@@ -186,7 +186,18 @@ export interface LegalDocument {
 export interface SiteConfig {
   key: SiteKey;
   domain: string;
-  country: { code: string; name: string; demonym: string };
+  country: {
+    code: string;
+    /** Official full name, used in structured data. */
+    name: string;
+    demonym: string;
+    /** Short label for eyebrows and adjectives, e.g. "UAE", "GCC". */
+    shortName: string;
+    /** Name as it reads mid-sentence, e.g. "the UAE", "India". */
+    inSentence: string;
+    /** Countries served, for structured data. Defaults to [name]. */
+    areaServed?: string[];
+  };
   brand: {
     name: string;
     wordmark: [string, string];
