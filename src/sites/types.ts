@@ -201,6 +201,8 @@ export interface SiteConfig {
     /** Routing key sent with every lead so the CRM/inbox can assign the right team. */
     routingKey: string;
     countryOptions: string[];
+    /** International dialling prefix shown in the phone field hint, e.g. "+94". */
+    dialCode: string;
   };
   hero: {
     eyebrow: string;
@@ -209,6 +211,8 @@ export interface SiteConfig {
     pendingClaimH1?: { text: string; approved: boolean };
     body: string;
     highlights: string[];
+    /** Short list of the statutory items prepared each month, shown in the hero schedule. */
+    statutorySummary: string;
   };
   stats: Stat[];
   why: { heading: string; intro: string; items: FeatureItem[] };

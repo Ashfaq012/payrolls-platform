@@ -31,7 +31,6 @@ Nothing on this list goes live as fact until the named owner signs it off. Updat
 | Recruitment, HR Outsourcing, Staff Outsourcing | Published | Confirm they're offered under this brand. Staff Outsourcing: name the employing entity |
 | Employer of Record | Draft | Sri Lankan employing entity, contract templates, liability terms |
 | Remote Staffing, Managed Services | Draft | Positioning, scope, delivery model |
-| Multi-Country Payroll | Draft | Publish only when other markets are operational |
 
 ## Compliance content
 
