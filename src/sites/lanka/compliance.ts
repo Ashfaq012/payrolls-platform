@@ -3,9 +3,9 @@ import type { ComplianceContent } from "../types";
 /**
  * Educational compliance content for Sri Lanka.
  *
- * Figures are marked `verified: false` until checked against the official
- * source by a qualified reviewer. Unverified figures render with a
- * "verify" badge rather than as settled fact. See docs/CONTENT-APPROVALS.md.
+ * Figures checked against the linked CBSL, ETF Board and Department of Labour
+ * sources on 2026-11-23. This records a source check, not professional legal sign-off.
+ * Recheck the sources when legislation changes. See docs/CONTENT-APPROVALS.md.
  */
 export const compliance: ComplianceContent = {
   heading: "Sri Lankan payroll compliance, explained",
@@ -13,7 +13,7 @@ export const compliance: ComplianceContent = {
     "Every Sri Lankan payroll has to meet several statutory obligations. Here is an overview of the main ones and how we support each of them.",
   disclaimer:
     "This overview is general information, not legal or tax advice. Requirements depend on your workforce and change over time, so always confirm them against the official sources listed.",
-  lastReviewed: null,
+  lastReviewed: "2026-11-23",
   topics: [
     {
       id: "epf",
@@ -21,7 +21,7 @@ export const compliance: ComplianceContent = {
       fullName: "Employees' Provident Fund",
       icon: "landmark",
       summary:
-        "A mandatory retirement savings scheme funded by both employee and employer contributions, calculated on an employee's total earnings.",
+        "A mandatory retirement savings scheme funded by employee and employer contributions, based on total monthly earnings as defined for EPF.",
       keyPoints: [
         "Applies to most private-sector employees under the Employees' Provident Fund Act",
         "Contributions are made by both employee and employer every month",
@@ -33,12 +33,12 @@ export const compliance: ComplianceContent = {
         "Reconciliation of contributions against payroll",
       ],
       figures: [
-        { label: "Employee contribution (minimum)", value: "8% of total earnings", verified: false },
-        { label: "Employer contribution (minimum)", value: "12% of total earnings", verified: false },
+        { label: "Employee contribution (minimum)", value: "8% of total monthly earnings", verified: true },
+        { label: "Employer contribution (minimum)", value: "12% of total monthly earnings", verified: true },
       ],
       sources: [
-        { label: "Employees' Provident Fund — Central Bank of Sri Lanka", href: "https://epf.lk" },
-        { label: "Department of Labour", href: "https://www.labourdept.gov.lk" },
+        { label: "Central Bank of Sri Lanka — EPF contributions and earnings", href: "https://epf.lk/?p=171" },
+        { label: "Department of Labour — EPF", href: "https://labourdept.gov.lk/epf-division-new/" },
       ],
     },
     {
@@ -49,8 +49,8 @@ export const compliance: ComplianceContent = {
       summary:
         "An employer-funded contribution scheme managed by the Employees' Trust Fund Board, paid alongside EPF obligations.",
       keyPoints: [
-        "Funded entirely by the employer under the Employees' Trust Fund Act",
-        "Calculated on the same earnings base used for EPF",
+        "Paid entirely by the employer; it must not be deducted from employees' pay",
+        "Calculated on total monthly earnings as defined by the ETF Board",
         "Periodic member returns are required in addition to payments",
       ],
       weHandle: [
@@ -58,8 +58,8 @@ export const compliance: ComplianceContent = {
         "Contribution schedules and supporting returns",
         "Alignment of ETF and EPF earnings bases",
       ],
-      figures: [{ label: "Employer contribution", value: "3% of total earnings", verified: false }],
-      sources: [{ label: "Employees' Trust Fund Board", href: "https://www.etfb.lk" }],
+      figures: [{ label: "Employer contribution", value: "3% of total monthly earnings", verified: true }],
+      sources: [{ label: "ETF Board — employer contributions and earnings", href: "https://etfb.lk/employer-details/" }],
     },
     {
       id: "apit",
@@ -78,7 +78,7 @@ export const compliance: ComplianceContent = {
         "Monthly withholding reports",
         "Year-end employee tax documentation support",
       ],
-      sources: [{ label: "Inland Revenue Department", href: "https://www.ird.gov.lk" }],
+      sources: [{ label: "Inland Revenue Department — APIT guidance", href: "https://www.ird.gov.lk/en/Type%20of%20Taxes/SitePages/Advance%20Personal%20Income%20Tax%20%28APIT%29.aspx" }],
     },
     {
       id: "gratuity",
@@ -88,9 +88,10 @@ export const compliance: ComplianceContent = {
       summary:
         "A lump-sum payment owed to eligible employees when they leave after a qualifying period of service, under the Payment of Gratuity Act.",
       keyPoints: [
-        "Eligibility depends on completed years of service and the size of the employer",
-        "Payable on termination of employment, subject to the Act's conditions",
-        "Many employers track and provide for the liability during employment",
+        "Section 5 covers employers with 15 or more workers on any day in the 12 months before employment ends",
+        "Payment is due within 30 days of employment ending, subject to the Act's exclusions and conditions",
+        "Other than monthly-paid workers: 14 days' wages per completed year; piece-rate daily pay uses earnings divided by days worked over the preceding three months",
+        "More favourable agreements may apply; see sections 5–7 and 10 for eligibility and calculation rules",
       ],
       weHandle: [
         "Service-period tracking for every employee",
@@ -98,10 +99,10 @@ export const compliance: ComplianceContent = {
         "Liability estimates to support financial reporting",
       ],
       figures: [
-        { label: "Typical qualifying service", value: "5 completed years", verified: false },
-        { label: "Typical calculation basis", value: "Half a month's salary per year of service", verified: false },
+        { label: "Qualifying service under section 5", value: "At least 5 completed years with the employer", verified: true },
+        { label: "Monthly-paid workers", value: "Half the last-drawn monthly wage or salary per completed year", verified: true },
       ],
-      sources: [{ label: "Department of Labour", href: "https://www.labourdept.gov.lk" }],
+      sources: [{ label: "Department of Labour — Payment of Gratuity Act, sections 5–7 and 10", href: "https://labourdept.gov.lk/downloads/labour_code/55.pdf" }],
     },
   ],
 };

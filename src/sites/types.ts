@@ -99,7 +99,7 @@ export interface ComplianceContent {
   heading: string;
   intro: string;
   disclaimer: string;
-  /** ISO date of the last expert review, or null when not yet reviewed. */
+  /** ISO date of the last official-source review, or null when not yet reviewed. */
   lastReviewed: string | null;
   topics: ComplianceTopic[];
 }

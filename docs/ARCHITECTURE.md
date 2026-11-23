@@ -33,7 +33,7 @@ Every content item has a `status`:
 | `review` | everywhere | no | "Pending legal review" |
 | `draft` | only with drafts enabled (dev, or `SHOW_DRAFTS=true`) | no | "Draft — pending approval" |
 
-Statistics and claims have their own `approved` flags. Unapproved stats never render on live pages, and the "#1" hero claim stays off until approved. Compliance figures carry `verified: false` and show a "Verify with official source" badge.
+Statistics and claims have their own `approved` flags. Unapproved stats never render on live pages, and the "#1" hero claim stays off until approved. Compliance figures use `verified` flags: unchecked figures show a "Verify with official source" badge. The current Sri Lanka figures were checked against official sources on 2026-11-23 and marked verified; the source links remain visible.
 
 ### Path to a CMS
 
