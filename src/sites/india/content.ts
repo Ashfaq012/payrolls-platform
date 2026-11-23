@@ -23,7 +23,7 @@ export const stats: Stat[] = [
 export const why = {
   heading: "Why businesses choose Payrolls India",
   intro:
-    "Indian payroll means central laws, state rules and a tax regime choice for every employee. We bring the process, controls and local knowledge to get it right every month.",
+    "Indian payroll combines central laws, state rules and employee tax-regime declarations. We bring the process, controls and local knowledge to get it right every month.",
   items: [
     {
       title: "Payroll is our core service",
@@ -47,7 +47,7 @@ export const why = {
     },
     {
       title: "Confidential data handling",
-      body: "Salary and identity data is shared only with the people who need it, through agreed secure channels, in line with India's data protection law.",
+      body: "Salary and identity data is shared only with the people who need it, through agreed secure channels.",
       icon: "lock",
     },
     {
@@ -155,7 +155,7 @@ export const faqs: Faq[] = [
   },
   {
     q: "How do you handle the old and new tax regimes?",
-    a: "We collect each employee's regime choice and investment declarations, compute TDS accordingly, and handle proof collection before the financial year closes.",
+    a: "We collect annual tax-regime intimations and relevant evidence. The new regime is the default if no intimation is received. We compute salary TDS under the applicable year's rules; payroll intimation is separate from the employee's final income-tax return option.",
   },
   {
     q: "Will we still approve the payroll?",

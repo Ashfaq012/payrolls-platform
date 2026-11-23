@@ -179,6 +179,7 @@ export type StaticPageKey =
 
 export interface LegalDocument {
   updatedAt: string;
+  sources?: SourceLink[];
   sections: { heading: string; paragraphs: string[]; bullets?: string[] }[];
 }
 

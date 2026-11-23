@@ -92,11 +92,14 @@ export const pages: Record<StaticPageKey, StaticPage> = {
   },
 };
 
+import { sources } from "./sources";
+
 const ENTITY = "[Legal entity name — pending]";
 
 export const legal: SiteConfig["legal"] = {
   privacy: {
     updatedAt: "2026-11-23",
+    sources: [sources.privacy],
     sections: [
       {
         heading: "Who we are",
@@ -139,7 +142,7 @@ export const legal: SiteConfig["legal"] = {
       {
         heading: "Your rights",
         paragraphs: [
-          "Under the Digital Personal Data Protection Act, 2023 and the rules made under it, you may have rights to access information about, correct, complete and erase your personal data, to withdraw consent, to nominate another person, and to seek grievance redressal. You may also approach the Data Protection Board of India.",
+          "The Digital Personal Data Protection Act, 2023 has phased commencement. As of 23 November 2026, its core processing obligations and rights in sections 11-17 are not yet in force: G.S.R. 843(E) schedules them for eighteen months after Gazette publication in November 2025. These include access, correction, erasure, grievance redressal and nomination. This notice must be reviewed again when those provisions commence; it does not restrict rights under other applicable law.",
         ],
       },
       {
@@ -189,7 +192,7 @@ export const legal: SiteConfig["legal"] = {
       {
         heading: "Our approach",
         paragraphs: [
-          "This website is designed to work without advertising or tracking cookies. We use privacy-friendly, cookieless analytics to understand overall usage.",
+          "This website is designed to work without advertising or tracking cookies. Where configured, privacy-friendly, cookieless analytics helps us understand overall usage.",
         ],
       },
       {
