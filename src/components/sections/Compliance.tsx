@@ -19,7 +19,7 @@ export function Compliance({ content, countryName }: { content: ComplianceConten
           {content.topics.map((t) => (
             <StaggerItem key={t.id}>
               <article className="h-full rounded-2xl border border-line bg-white p-7 sm:p-8" aria-labelledby={`topic-${t.id}`}>
-                <header className="flex items-baseline justify-between gap-4 border-b border-line pb-4">
+                <header className="flex flex-col gap-1 border-b border-line pb-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                   <h3 id={`topic-${t.id}`} className="text-3xl font-extrabold">
                     {t.name}
                   </h3>

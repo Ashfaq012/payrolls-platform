@@ -63,7 +63,7 @@ export function buildNav(site: SiteConfig): NavData {
     resources: [
       ...pageLink("resources", "Guides", "Source-referenced payroll compliance guides.", "book"),
       ...pageLink("faqs", "FAQs", "Answers to common payroll outsourcing questions.", "headset"),
-      { label: "Compliance overview", href: "/#compliance", description: `${site.country.name} payroll obligations at a glance.`, icon: "shield" },
+      { label: "Compliance overview", href: "/#compliance", description: `${site.country.shortName} payroll obligations at a glance.`, icon: "shield" },
     ],
   };
 

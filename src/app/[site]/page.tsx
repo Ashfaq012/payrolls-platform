@@ -44,16 +44,16 @@ export default async function HomePage() {
       <Stats site={site} />
       <ServiceGrid
         services={featured}
-        title={`Workforce services for ${site.country.name}`}
+        title={`Workforce services for ${site.country.inSentence}`}
         intro="Start with payroll, then add the HR and staffing services your business needs as it grows."
       />
       <WhyUs heading={site.why.heading} intro={site.why.intro} items={site.why.items} />
       <Process heading={site.process.heading} intro={site.process.intro} steps={site.process.steps} />
       <Industries industries={site.industries} intro="Every industry pays its people differently. We configure payroll around the way yours works." />
-      <Compliance content={site.compliance} countryName={site.country.name} />
+      <Compliance content={site.compliance} countryName={site.country.shortName} />
       {/* Testimonials and case studies: none approved yet — section intentionally omitted. */}
       <ResourcesPreview articles={articles} />
-      <FaqSection faqs={site.faqs.slice(0, 5)} intro={`Common questions about outsourcing payroll in ${site.country.name}.`} moreHref={site.pages.faqs.path} />
+      <FaqSection faqs={site.faqs.slice(0, 5)} intro={`Common questions about outsourcing payroll in ${site.country.inSentence}.`} moreHref={site.pages.faqs.path} />
       <FinalCta proposalHref={site.pages.proposal.path} contactHref={site.pages.contact.path} />
     </>
   );

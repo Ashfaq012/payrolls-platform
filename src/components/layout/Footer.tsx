@@ -41,7 +41,7 @@ export async function Footer({ site, nav }: { site: SiteConfig; nav: NavData }) 
           <div className="max-w-xs">
             <Brand brand={site.brand} tone="light" />
             <p className="mt-5 text-sm leading-relaxed">
-              Payroll outsourcing, HR outsourcing and workforce services for businesses in {site.country.name}.
+              Payroll outsourcing, HR outsourcing and workforce services for businesses in {site.country.inSentence}.
             </p>
             <div className="mt-6 space-y-1.5 text-sm">
               {contact.approved && contact.email ? (

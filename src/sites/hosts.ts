@@ -11,7 +11,7 @@ export const SITE_KEYS = ["lanka", "india", "saudia", "arabia", "emirates"] as c
 export type SiteKey = (typeof SITE_KEYS)[number];
 
 /** Sites that are built and served. Add a key here when its config is ready. */
-export const LIVE_SITE_KEYS: readonly SiteKey[] = ["lanka", "india", "saudia", "emirates"];
+export const LIVE_SITE_KEYS: readonly SiteKey[] = ["lanka", "india", "saudia", "emirates", "arabia"];
 
 /** Production apex domains. `www.` variants redirect to these. */
 export const PRODUCTION_HOSTS: Record<string, SiteKey> = {

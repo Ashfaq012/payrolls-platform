@@ -137,6 +137,9 @@ export function ProposalForm({
         </Field>
         <Field id="country" label="Country" error={errors.country}>
           <select id="f-country" name="country" required value={values.country} onChange={update("country")} {...aria("country", errors)} className={inputCls(errors.country)}>
+            <option value="" disabled>
+              Select a country
+            </option>
             {countryOptions.map((c) => (
               <option key={c}>{c}</option>
             ))}

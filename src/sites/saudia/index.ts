@@ -8,7 +8,7 @@ import { services } from "./services";
 export const saudia: SiteConfig = {
   key: "saudia",
   domain: "payrollsaudia.com",
-  country: { code: "SA", name: "Saudi Arabia", demonym: "Saudi" },
+  country: { code: "SA", name: "Saudi Arabia", demonym: "Saudi", shortName: "Saudi Arabia", inSentence: "Saudi Arabia" },
   brand: {
     name: "Payroll Saudia",
     wordmark: ["PAYROLL", "SAUDIA"],

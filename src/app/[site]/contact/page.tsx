@@ -52,7 +52,7 @@ export default async function ContactPage() {
             )}
             {contact.hours && <p className="text-sm text-muted">{contact.hours}</p>}
           </aside>
-          <ProposalForm services={services} countryOptions={site.leads.countryOptions} defaultCountry={site.country.name} privacyHref={site.pages.privacy.path} dialCode={site.leads.dialCode} />
+          <ProposalForm services={services} countryOptions={site.leads.countryOptions} defaultCountry={site.leads.countryOptions.includes(site.country.name) ? site.country.name : ""} privacyHref={site.pages.privacy.path} dialCode={site.leads.dialCode} />
         </Container>
       </section>
     </>

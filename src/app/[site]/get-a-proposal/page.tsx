@@ -15,7 +15,7 @@ export default async function ProposalPage() {
       <PageHero site={site} eyebrow={page.eyebrow} title={page.h1} intro={page.intro} trail={[{ name: "Get a Proposal", path: page.path }]} />
       <section className="relative -mt-10 pb-24 lg:pb-32">
         <Container className="grid gap-10 lg:grid-cols-[1.4fr_0.8fr] lg:gap-14">
-          <ProposalForm services={services} countryOptions={site.leads.countryOptions} defaultCountry={site.country.name} privacyHref={site.pages.privacy.path} dialCode={site.leads.dialCode} />
+          <ProposalForm services={services} countryOptions={site.leads.countryOptions} defaultCountry={site.leads.countryOptions.includes(site.country.name) ? site.country.name : ""} privacyHref={site.pages.privacy.path} dialCode={site.leads.dialCode} />
           <aside className="space-y-5 lg:pt-10">
             <h2 className="text-xl font-bold">What happens next</h2>
             <ol className="space-y-5">
